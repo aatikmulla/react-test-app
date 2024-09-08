@@ -7,6 +7,7 @@ interface Props {
 }
 
 const FirstChild: React.FC<Props> = () => {
+  /* it renders only when context changes i.e, 4 times compared to 9 times in parent component */
     const selectedProject = useContextSelector(AppContext, (v: IContextType) => v.selectedProject);
     const renderCountRef = React.useRef(0);
     React.useLayoutEffect(() => {
